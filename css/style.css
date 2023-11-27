@@ -10,8 +10,8 @@
 
 /* Change the color of the scrollbar track */
 ::-webkit-scrollbar {
-	width: 4px;
-	height: 4px;
+	width: 5px;
+	height: 5px;
 	/* You can adjust the width */
 	background: transparent;
 	/* Change this to the color you prefer */
@@ -21,7 +21,7 @@
 
 /* Change the color and make the scrollbar thumb rounded */
 ::-webkit-scrollbar-thumb {
-	background: var(--secondary);
+	background: var(--accent);
 	/* Change this to the color you prefer */
 	border-radius: 6px;
 	/* Adjust the value to control the roundness */
@@ -64,12 +64,34 @@ body {
 }
 
 .mycontainer {
+  position: relative;
   max-width: 1290px; 
   margin: auto; 
   padding: 0 10px 0 10px;
   /* padding: 80px 10px 0 10px; */
   /* border: 2px solid black; */
   /* min-height: 130vh; */
+}
+
+.go-top {
+	display: none;
+	font-size: 20px;
+  width: 40px;
+  height: 40px;
+	text-align: center;
+  border-radius: 100px;
+	bottom: 20px;
+	right: 20px;
+	transition: all 0.2s ease-in-out;
+	animation: slideL 0.3s ease-in-out;
+}
+
+.go-top:hover{
+	bottom: 25px;
+}
+
+.nav-shadow {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.025);
 }
 
 .bung-nav {
@@ -113,4 +135,15 @@ nav a span {
 @keyframes fade {
   0% {opacity: 0;}
   100%{opacity: 1;}
+}
+
+@keyframes slideL {
+	0% {
+		transform: translateX(50px);
+		opacity: -1;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
 }
