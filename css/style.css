@@ -4,6 +4,7 @@
   --primary: #f2e9e4;
   --secondary: #1e2d2f;
   --accent: #c57b57;
+  --accent-darker: #9e5937;
   /*#838fba  c9d7c0*/
   scroll-behavior: smooth;
 }
@@ -44,6 +45,23 @@ body {
   color: var(--secondary) !important;
 }
 
+.btn-primary {
+  background-color: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  transition: all .3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent);
+  color: var(--primary);
+  border: none;
+}
+
+.btn-primary:active {
+  background-color: var(--accent-darker) !important;
+}
+
 .btn-outline-primary {
   background-color: var(--primary);
   color: var(--accent);
@@ -59,6 +77,10 @@ body {
   background-color: var(--accent);
   color: var(--primary);
   font-weight: 500;
+}
+
+.border-accent {
+  border-color: var(--accent) !important;
 }
 
 .mycontainer {
@@ -137,16 +159,24 @@ nav a span {
 }
 
 .hero h1 {
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 400;
 }
 
-.hero h1 span {
+/* .hero h1 span {
   font-weight: 600;
-}
+} */
 
 h2.title {
   padding-top: 100px;
+  padding-bottom: 5px;
+}
+
+.garis {
+  height: 5px;
+  width: 250px;
+  background-color: var(--accent);
+  margin: 0 auto;
 }
 
 .card-image {
